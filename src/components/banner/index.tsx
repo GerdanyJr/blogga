@@ -8,7 +8,7 @@ export function Banner() {
   return (
     <div className={styles.banner}>
       <header className={styles.header}>
-        <Link href="#">
+        <Link href="/">
           <BloggaLogo />
         </Link>
         <nav className={styles.nav}>
