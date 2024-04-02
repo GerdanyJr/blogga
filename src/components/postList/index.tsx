@@ -1,4 +1,4 @@
-import { Post } from "./Post";
+import { Post } from "..";
 import styles from "./postList.module.css";
 
 import { post } from "@/constants/Post";
