@@ -20,7 +20,7 @@ export function Post({
   alt,
 }: PostProps) {
   return (
-    <Link href={id.toString()}>
+    <Link href={`/${id}`}>
       <article className={styles.post}>
         <div className={styles.article_container}>
           <div className={styles.article_header}>
