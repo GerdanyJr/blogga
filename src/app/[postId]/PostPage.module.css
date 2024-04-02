@@ -1,0 +1,17 @@
+.container {
+}
+.postImg {
+  width: 100%;
+  max-height: 720px;
+  position: relative;
+  top: -1em;
+  border-radius: 0 0 1em 1em;
+}
+.post_content {
+  max-width: 50%;
+  margin: 0 auto;
+  font-family: var("--poppings");
+}
+.post_content p {
+  margin: 1em 0;
+}
