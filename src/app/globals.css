@@ -20,3 +20,7 @@ body {
   box-sizing: border-box;
   font-family: var(--poppings);
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,6 +1,8 @@
 import styles from "./banner.module.css";
 import { BloggaLogo } from "../../../public/assets/svg";
 import Link from "next/link";
+import { BannerActions } from "./bannerActions/BannerActions";
+import AnimatedLink from "./animatedLink";
 
 export function Banner() {
   return (
@@ -12,24 +14,20 @@ export function Banner() {
         <nav className={styles.nav}>
           <ul className={styles.ul}>
             <li>
-              <a href="#">Design Tools</a>
+              <AnimatedLink href="#">Design</AnimatedLink>
             </li>
             <li>
-              <a href="#">Daily Updates</a>
+              <AnimatedLink href="#">Daily Updates</AnimatedLink>
             </li>
             <li>
-              <a href="#">Tutorials</a>
+              <AnimatedLink href="#">Tutorials</AnimatedLink>
             </li>
             <li>
-              <a href="#">Library</a>
+              <AnimatedLink href="#">Library</AnimatedLink>
             </li>
           </ul>
         </nav>
-        <div className={styles.actions}>
-          <button type="button" className={styles.subscribe_button}>
-            Subscribe
-          </button>
-        </div>
+        <BannerActions />
       </header>
 
       <div className={styles.banner_title}>
