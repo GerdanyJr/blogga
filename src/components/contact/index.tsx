@@ -1,5 +1,5 @@
 import styles from "./contact.module.css";
-import { TopArrow } from "@/assets/svg";
+import { TopArrow } from "../../../public/assets/svg";
 
 export function Contact() {
   return (

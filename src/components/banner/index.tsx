@@ -1,5 +1,5 @@
 import styles from "./banner.module.css";
-import { BloggaLogo } from "@/assets/svg";
+import { BloggaLogo } from "../../../public/assets/svg";
 import Link from "next/link";
 
 export function Banner() {
