@@ -2,8 +2,8 @@ import styles from "./banner.module.css";
 import { BloggaLogo } from "../../../public/assets/svg";
 import Link from "next/link";
 import { BannerActions } from "./bannerActions/BannerActions";
-import AnimatedLink from "./animatedLink";
 import { NavBar } from "./navBar";
+import BannerTitle from "./bannerTitle";
 
 export function Banner() {
   return (
@@ -15,11 +15,7 @@ export function Banner() {
         <NavBar />
         <BannerActions />
       </header>
-
-      <div className={styles.banner_title}>
-        <h3>👋 HELLO</h3>
-        <h1>Insights about my personal and work life, and the in betweens</h1>
-      </div>
+      <BannerTitle />
     </div>
   );
 }
