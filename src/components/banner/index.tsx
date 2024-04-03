@@ -3,6 +3,7 @@ import { BloggaLogo } from "../../../public/assets/svg";
 import Link from "next/link";
 import { BannerActions } from "./bannerActions/BannerActions";
 import AnimatedLink from "./animatedLink";
+import { NavBar } from "./navBar";
 
 export function Banner() {
   return (
@@ -11,22 +12,7 @@ export function Banner() {
         <Link href="/">
           <BloggaLogo />
         </Link>
-        <nav className={styles.nav}>
-          <ul className={styles.ul}>
-            <li>
-              <AnimatedLink href="#">Design</AnimatedLink>
-            </li>
-            <li>
-              <AnimatedLink href="#">Daily Updates</AnimatedLink>
-            </li>
-            <li>
-              <AnimatedLink href="#">Tutorials</AnimatedLink>
-            </li>
-            <li>
-              <AnimatedLink href="#">Library</AnimatedLink>
-            </li>
-          </ul>
-        </nav>
+        <NavBar />
         <BannerActions />
       </header>
 
