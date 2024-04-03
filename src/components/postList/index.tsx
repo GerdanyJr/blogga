@@ -1,17 +1,19 @@
-import { APIURL } from "@/util/constants/http";
 import { Post } from "..";
 import styles from "./postList.module.css";
 import { ShowcasePost } from "@/types/interface/ShowcasePost";
 
-export async function PostList() {
-  const response = await fetch(`${APIURL}/posts?limit=5`, {
-    cache: "force-cache",
-  });
-  const posts = (await response.json()) as ShowcasePost[];
-
+export function PostList({
+  title,
+  posts,
+  className,
+}: {
+  title: string;
+  posts: ShowcasePost[];
+  className?: string;
+}) {
   return (
-    <section className={styles.post_group}>
-      <h2 className={styles.group_title}>Last Posts</h2>
+    <section className={(styles.post_group, className ?? "")}>
+      <h2 className={styles.group_title}>{title}</h2>
       {posts.map((post) => (
         <Post
           key={post.id}

@@ -2,6 +2,6 @@ import { Banner } from "./banner";
 import { Contact } from "./contact";
 import { Footer } from "./footer";
 import { PostList } from "./postList";
-import { Post } from "./postList/Post";
+import { Post } from "./postList/post/Post";
 
 export { Banner, Contact, Footer, PostList, Post };
