@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./post.module.css";
 import { formatDate } from "@/util/formatter";
-import { memo } from "react";
+import React, { forwardRef, memo } from "react";
 interface PostProps {
   id: number;
   category: string;
@@ -12,21 +12,26 @@ interface PostProps {
   alt: string;
 }
 export const Post = memo(
-  ({ id, category, date, title, content, src, alt }: PostProps) => {
-    return (
-      <Link href={`/${id}`}>
-        <article className={styles.post}>
-          <div className={styles.article_container}>
-            <div className={styles.article_header}>
-              <p className={styles.post_category}>{category}</p>
-              <p className={styles.post_date}>{formatDate(date)}</p>
+  forwardRef(
+    (
+      { id, category, date, title, content, src, alt }: PostProps,
+      ref: React.Ref<HTMLAnchorElement>
+    ) => {
+      return (
+        <Link href={`/${id}`} ref={ref}>
+          <article className={styles.post}>
+            <div className={styles.article_container}>
+              <div className={styles.article_header}>
+                <p className={styles.post_category}>{category}</p>
+                <p className={styles.post_date}>{formatDate(date)}</p>
+              </div>
+              <h3>{title}</h3>
+              <p>{content}</p>
             </div>
-            <h3>{title}</h3>
-            <p>{content}</p>
-          </div>
-          <img src={src} alt={alt} />
-        </article>
-      </Link>
-    );
-  }
+            <img src={src} alt={alt} />
+          </article>
+        </Link>
+      );
+    }
+  )
 );

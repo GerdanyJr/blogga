@@ -12,11 +12,6 @@ export default async function PostPage({
     cache: "no-store",
   });
   const post = (await response.json()) as ShowcasePost;
-  const postsResponse = await fetch(`${APIURL}/posts?limit=5`, {
-    cache: "no-store",
-  });
-  const posts = (await postsResponse.json()) as ShowcasePost[];
-
   return (
     <>
       <img src={post.src} className={styles.postImg} />
@@ -53,8 +48,8 @@ export default async function PostPage({
         </article>
         <PostList
           title="Other interesting posts"
-          posts={posts}
           className={styles.post_list}
+          actualPostId={params.postId}
         />
         <Contact />
       </div>
