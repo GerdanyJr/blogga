@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./postList.module.css";
+import styles from "./post.module.css";
 import { formatDate } from "@/util/formatter";
 import { memo } from "react";
 interface PostProps {
