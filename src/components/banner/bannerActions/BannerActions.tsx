@@ -16,7 +16,7 @@ export function BannerActions() {
         whileTap={{
           scale: 0.9,
         }}
-        onClick={() => router.push("/subscribe")}
+        onClick={() => router.push("/auth")}
       >
         Subscribe
       </motion.button>

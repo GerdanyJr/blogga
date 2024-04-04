@@ -8,7 +8,8 @@
   --primary-white: #ffffff;
   --primary-grey: rgba(128, 128, 128, 0.481);
   --blue-500: #8ceead;
-
+  --grey-200: #d6d6d6;
+  --grey-300: #b0a9a9;
   --secondary-blue: #ebf2fe;
   --poppings: "Poppins", sans-serif;
 }
@@ -19,7 +20,9 @@
 body {
   box-sizing: border-box;
   font-family: var(--poppings);
-  background-color: #f1f1f4;
+  background-color: #eaeaea;
+  height: 100vh;
+  width: 100vw;
 }
 a {
   text-decoration: none;
