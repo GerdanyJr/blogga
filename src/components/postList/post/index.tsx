@@ -1,7 +1,7 @@
-import Link from "next/link";
 import styles from "./post.module.css";
 import { formatDate } from "@/util/formatter";
 import React, { forwardRef, memo } from "react";
+import { MotionLink } from "./MotionLink";
 interface PostProps {
   id: number;
   category: string;
@@ -11,6 +11,7 @@ interface PostProps {
   src: string;
   alt: string;
 }
+
 export const Post = memo(
   forwardRef(
     (
@@ -18,7 +19,17 @@ export const Post = memo(
       ref: React.Ref<HTMLAnchorElement>
     ) => {
       return (
-        <Link href={`/${id}`} ref={ref}>
+        <MotionLink
+          href={`/${id}`}
+          ref={ref}
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: {
+              duration: 0.5,
+            },
+          }}
+        >
           <article className={styles.post}>
             <div className={styles.article_container}>
               <div className={styles.article_header}>
@@ -30,7 +41,7 @@ export const Post = memo(
             </div>
             <img src={src} alt={alt} />
           </article>
-        </Link>
+        </MotionLink>
       );
     }
   )
