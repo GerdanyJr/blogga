@@ -1,8 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
 import styles from "./bannerActions.module.css";
+import { useRouter } from "next/navigation";
 
 export function BannerActions() {
+  const router = useRouter();
   return (
     <div className={styles.actions}>
       <motion.button
@@ -14,6 +16,7 @@ export function BannerActions() {
         whileTap={{
           scale: 0.9,
         }}
+        onClick={() => router.push("/subscribe")}
       >
         Subscribe
       </motion.button>

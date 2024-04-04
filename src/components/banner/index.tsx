@@ -9,7 +9,7 @@ export function Banner() {
   return (
     <div className={styles.banner}>
       <header className={styles.header}>
-        <Link href="/">
+        <Link href="/home">
           <BloggaLogo />
         </Link>
         <NavBar />

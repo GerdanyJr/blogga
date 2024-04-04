@@ -19,6 +19,7 @@
 body {
   box-sizing: border-box;
   font-family: var(--poppings);
+  background-color: #f1f1f4;
 }
 a {
   text-decoration: none;

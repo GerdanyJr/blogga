@@ -20,7 +20,7 @@ export const Post = memo(
     ) => {
       return (
         <MotionLink
-          href={`/${id}`}
+          href={`/home/${id}`}
           ref={ref}
           initial={{ opacity: 0 }}
           animate={{

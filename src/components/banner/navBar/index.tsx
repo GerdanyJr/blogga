@@ -10,7 +10,7 @@ export function NavBar() {
     <nav className={styles.nav}>
       <ul className={styles.ul}>
         <li>
-          <AnimatedLink href="/" active={pathname === "/"}>
+          <AnimatedLink href="/" active={pathname === "/home"}>
             Home
           </AnimatedLink>
         </li>
