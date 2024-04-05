@@ -26,7 +26,7 @@ export const FormInput = forwardRef(
     ref: LegacyRef<HTMLInputElement>
   ) => {
     return (
-      <p>
+      <>
         <motion.input
           variants={variants}
           animate={(isDirty || isSubmitted) && (errors ? "invalid" : "valid")}
@@ -43,7 +43,7 @@ export const FormInput = forwardRef(
             {errors.message}
           </motion.p>
         )}
-      </p>
+      </>
     );
   }
 );
