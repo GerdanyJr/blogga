@@ -1,5 +1,4 @@
-import styles from "./formHeader.module.css";
-export default function FormHeader({
+export function FormHeader({
   title,
   subtitle,
 }: {
@@ -7,9 +6,9 @@ export default function FormHeader({
   subtitle: string;
 }) {
   return (
-    <div className={styles.form_header}>
-      <h1>{title}</h1>
-      <h2>{subtitle}</h2>
+    <div>
+      <h1 className="text-2xl font-semibold">{title}</h1>
+      <h2 className="text-xl font-normal">{subtitle}</h2>
     </div>
   );
 }

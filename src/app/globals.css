@@ -8,4 +8,7 @@
 @import url("/styles/footer.css");
 :root {
   --blue-500: #8ceead;
+  --blue-800: #0016df;
+  --error: #ed4337;
+  --success: #00a86b;
 }

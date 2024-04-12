@@ -1,13 +1,12 @@
 "use client";
 
 import { FormInput } from "@/components/auth/formInput";
-import styles from "./subscribePage.module.css";
 import FormButton from "@/components/auth/formButton";
 import { AnimatedLink } from "./animatedLink/AnimatedLink";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import FormHeader from "./formHeader";
+import { FormHeader } from "./formHeader";
 
 interface Inputs {
   email: string;
@@ -34,9 +33,9 @@ export default function SubscribePage() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-8">
       <FormHeader title="Login" subtitle="To get started" />
-      <div className={styles.inputs}>
+      <div className="flex flex-col gap-4">
         <FormInput
           placeholder="E-mail"
           type="email"
@@ -53,13 +52,16 @@ export default function SubscribePage() {
           isSubmitted={isSubmitted}
           {...register("password")}
         />
-        <AnimatedLink href={""} className={styles.forgot_password}>
+        <AnimatedLink href={""} className="text-[#333333] text-sm">
           Forgot Password?
         </AnimatedLink>
       </div>
       <FormButton type="submit">Login</FormButton>
-      <AnimatedLink href={"/auth/register"} className={styles.register}>
-        New user? <span>Register</span>
+      <AnimatedLink
+        href={"/auth/register"}
+        className="text-[#333333] text-sm text-center block mt-8"
+      >
+        New user? <span className="font-semibold">Register</span>
       </AnimatedLink>
     </form>
   );

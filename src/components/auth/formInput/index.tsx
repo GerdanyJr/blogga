@@ -1,4 +1,3 @@
-import styles from "./FormInput.module.css";
 import { HTMLMotionProps, Variants, motion } from "framer-motion";
 import { LegacyRef, forwardRef } from "react";
 import { FieldError } from "react-hook-form";
@@ -25,20 +24,25 @@ export const FormInput = forwardRef(
     { errors, isDirty, isSubmitted, ...props }: FormInputProps,
     ref: LegacyRef<HTMLInputElement>
   ) => {
+    console.log(errors?.message);
     return (
       <div>
         <motion.input
           variants={variants}
           animate={(isDirty || isSubmitted) && (errors ? "invalid" : "valid")}
           ref={ref}
-          className={errors ? styles.invalid_input : styles.input}
+          className={`p-4 w-[25vw] border-[1px] border-grey-200 rounded-xl text-[#333333] outline-none ${
+            errors
+              ? "placeholder:text-error"
+              : "placeholder:text-grey-300"
+          }`}
           {...props}
         />
         {errors && (
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ color: "var(--error)", opacity: 1 }}
-            className={styles.error_message}
+            className="mt-1 text-sm"
           >
             {errors.message}
           </motion.p>
