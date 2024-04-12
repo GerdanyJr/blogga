@@ -1,4 +1,3 @@
-import styles from "./post.module.css";
 import { formatDate } from "@/util/formatter";
 import React, { forwardRef, memo } from "react";
 import { MotionLink } from "./MotionLink";
@@ -30,16 +29,20 @@ export const Post = memo(
             },
           }}
         >
-          <article className={styles.post}>
-            <div className={styles.article_container}>
-              <div className={styles.article_header}>
-                <p className={styles.post_category}>{category}</p>
-                <p className={styles.post_date}>{formatDate(date)}</p>
+          <article className="flex items-center py-4 my-4 border-t-[1px] m border-grey text-blue">
+            <div className="mr-4">
+              <div className="flex items-center gap-4 text-sm uppercase text-blue text-bold">
+                <p className="p-2 rounded-lg bg-grey text-bold">{category}</p>
+                <p>{formatDate(date)}</p>
               </div>
-              <h3>{title}</h3>
-              <p>{content}</p>
+              <h3 className="py-4 text-2xl font-semibold">{title}</h3>
+              <p className="text-sm font-normal line-clamp-3">{content}</p>
             </div>
-            <img src={src} alt={alt} />
+            <img
+              src={src}
+              alt={alt}
+              className="min-h-64 min-w-64 max-w-64 max-h-64 rounded-2xl"
+            />
           </article>
         </MotionLink>
       );
