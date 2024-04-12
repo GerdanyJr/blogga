@@ -1,33 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("/styles/banner.css");
 @import url("/styles/main.css");
 @import url("/styles/contact.css");
 @import url("/styles/footer.css");
 :root {
-  --primary-blue: #232e52;
-  --primary-white: #ffffff;
-  --primary-grey: rgba(128, 128, 128, 0.481);
-  --error: #ed4337;
-  --success: #00a86b;
   --blue-500: #8ceead;
   --blue-800: #0016df;
-  --grey-200: #d6d6d6;
-  --grey-300: #b0a9a9;
-  --secondary-blue: #ebf2fe;
-  --poppings: "Poppins", sans-serif;
-}
-* {
-  margin: 0;
-  padding: 0;
-}
-body {
-  box-sizing: border-box;
-  font-family: var(--poppings);
-  background-color: #eaeaea;
-  height: 100vh;
-  width: 100vw;
-}
-a {
-  text-decoration: none;
-  color: inherit;
+  --error: #ed4337;
+  --success: #00a86b;
 }

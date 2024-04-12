@@ -2,7 +2,6 @@
 
 import { useInfiniteScroll } from "@/hooks/useInfiniteScroll";
 import { Post } from "..";
-import styles from "./postList.module.css";
 import { ShowcasePost } from "@/types/interface/ShowcasePost";
 import { getPosts } from "@/service/PostsHttp";
 import { useMemo } from "react";
@@ -26,8 +25,8 @@ export function PostList({
   );
 
   return (
-    <section className={(styles.post_group, className ?? "")}>
-      <h2 className={styles.group_title}>{title}</h2>
+    <section className={className ?? ""}>
+      <h2 className="text-4xl font-bold text-blue">{title}</h2>
       {posts.map((post, index) => (
         <Post
           key={post.id}

@@ -1,7 +1,6 @@
-import styles from "./footer.module.css";
 export function Footer() {
   return (
-    <footer className={styles.footer}>
+    <footer className="py-4 text-center border-t-[1px] border-t-grey text-blue">
       <p>Copyright 2021 - Elikem Daniels</p>
     </footer>
   );

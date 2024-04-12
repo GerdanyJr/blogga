@@ -2,13 +2,12 @@
 
 import { usePathname } from "next/navigation";
 import AnimatedLink from "../animatedLink";
-import styles from "./navBar.module.css";
 
 export function NavBar() {
   const pathname = usePathname();
   return (
-    <nav className={styles.nav}>
-      <ul className={styles.ul}>
+    <nav>
+      <ul className="flex text-white gap-4">
         <li>
           <AnimatedLink href="/" active={pathname === "/home"}>
             Home

@@ -1,5 +1,4 @@
 import { Banner, Footer } from "@/components";
-import styles from "./page.module.css";
 
 export default function RootLayout({
   children,
@@ -8,7 +7,7 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <main className={styles.layout}>
+      <main className="m-4">
         <Banner />
         {children}
       </main>

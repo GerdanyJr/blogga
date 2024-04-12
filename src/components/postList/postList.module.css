@@ -1,9 +1,0 @@
-.group_title {
-  color: var(--primary-blue);
-  font-size: 2em;
-}
-@media screen and (max-width: 1024px) {
-  .main {
-    margin: 5em 10%;
-  }
-}

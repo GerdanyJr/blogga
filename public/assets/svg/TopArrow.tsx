@@ -1,6 +1,7 @@
-export function TopArrow() {
+export function TopArrow({ className }: { className?: string }) {
   return (
     <svg
+      className={className}
       width="105"
       height="103"
       viewBox="0 0 105 103"
