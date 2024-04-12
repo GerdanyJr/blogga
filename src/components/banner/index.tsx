@@ -1,4 +1,3 @@
-import styles from "./banner.module.css";
 import { BloggaLogo } from "../../../public/assets/svg";
 import Link from "next/link";
 import { BannerActions } from "./bannerActions/BannerActions";
@@ -7,8 +6,8 @@ import BannerTitle from "./bannerTitle";
 
 export function Banner() {
   return (
-    <div className={styles.banner}>
-      <header className={styles.header}>
+    <div className="bg-blue p-8 rounded-xl">
+      <header className="flex justify-between items-center">
         <Link href="/home">
           <BloggaLogo />
         </Link>

@@ -6,3 +6,6 @@
 @import url("/styles/main.css");
 @import url("/styles/contact.css");
 @import url("/styles/footer.css");
+:root {
+  --blue-500: #8ceead;
+}

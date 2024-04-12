@@ -1,9 +1,0 @@
-.a {
-  color: var(--primary-white);
-  text-decoration: none;
-  margin: 0 1em;
-  padding: 0.2em 0;
-}
-.active {
-  color: var(--blue-500);
-}
